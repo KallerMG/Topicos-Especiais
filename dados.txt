@@ -1,0 +1,78 @@
+sssss
+25/03/2021 22:52
+Uso da CPU: 8.7%
+Frequencia da CPU: 1242.14 MHz
+Media 1 min: 0.36% Media 5 min: 0.43% Media 15 min: 0.85%
+Temp CPU: 52.0ºC
+Memoria Usada: 3659993088 bytes
+Memoria Disponivel: 3489955840 bytes
+Memoria Porcentagem Utilizada: 56.6%
+Memoria Livre: 229060608 bytes
+Velocidade Fan: 0 RPM
+
+25/03/2021 22:52
+Uso da CPU: 15.0%
+Frequencia da CPU: 987.75 MHz
+Media 1 min: 0.42% Media 5 min: 0.44% Media 15 min: 0.85%
+Temp CPU: 52.0ºC
+Memoria Usada: 3654713344 bytes
+Memoria Disponivel: 3462922240 bytes
+Memoria Porcentagem Utilizada: 57.0%
+Memoria Livre: 202002432 bytes
+Velocidade Fan: 0 RPM
+
+25/03/2021 22:52
+Uso da CPU: 7.7%
+Frequencia da CPU: 1260.12 MHz
+Media 1 min: 0.38% Media 5 min: 0.43% Media 15 min: 0.85%
+Temp CPU: 51.0ºC
+Memoria Usada: 3659341824 bytes
+Memoria Disponivel: 3465453568 bytes
+Memoria Porcentagem Utilizada: 56.9%
+Memoria Livre: 204521472 bytes
+Velocidade Fan: 0 RPM
+
+25/03/2021 22:53
+Uso da CPU: 6.0%
+Frequencia da CPU: 787.65 MHz
+Media 1 min: 0.68% Media 5 min: 0.52% Media 15 min: 0.85%
+Temp CPU: 50.0ºC
+Memoria Usada: 3652849664 bytes
+Memoria Disponivel: 3500244992 bytes
+Memoria Porcentagem Utilizada: 56.5%
+Memoria Livre: 238632960 bytes
+Velocidade Fan: 2561 RPM
+
+25/03/2021 22:53
+Uso da CPU: 1.6%
+Frequencia da CPU: 699.98 MHz
+Media 1 min: 0.79% Media 5 min: 0.54% Media 15 min: 0.86%
+Temp CPU: 49.0ºC
+Memoria Usada: 3652313088 bytes
+Memoria Disponivel: 3460661248 bytes
+Memoria Porcentagem Utilizada: 57.0%
+Memoria Livre: 199032832 bytes
+Velocidade Fan: 2561 RPM
+
+25/03/2021 22:53
+Uso da CPU: 2.5%
+Frequencia da CPU: 1192.37 MHz
+Media 1 min: 0.8% Media 5 min: 0.55% Media 15 min: 0.86%
+Temp CPU: 49.0ºC
+Memoria Usada: 3653857280 bytes
+Memoria Disponivel: 3503828992 bytes
+Memoria Porcentagem Utilizada: 56.5%
+Memoria Livre: 241917952 bytes
+Velocidade Fan: 2566 RPM
+
+25/03/2021 22:53
+Uso da CPU: 1.9%
+Frequencia da CPU: 800.05 MHz
+Media 1 min: 0.9% Media 5 min: 0.58% Media 15 min: 0.87%
+Temp CPU: 48.0ºC
+Memoria Usada: 3651092480 bytes
+Memoria Disponivel: 3501690880 bytes
+Memoria Porcentagem Utilizada: 56.5%
+Memoria Livre: 240013312 bytes
+Velocidade Fan: 2561 RPM
+
