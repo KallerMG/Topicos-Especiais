@@ -100,7 +100,56 @@ def iniciarColeta(tempo):
 
         time.sleep(tempo)
 
+
+#func teste implementação
+
+def iniciarColetaInterface(tempo):
+    #ciclo infinito
+    while True:
+        try:
+            #Salvando dados das funcs em variaveis 
+            cpu_uso = cpuUsoKaller()
+            cpu_freq = cpuFreqKaller()
+            cpu_media = cpuMediaKaller()
+            cpu_temp = cpuTempKaller()
+            memo_uso = memoUsoKaler()
+            memo_disp = memoDispKaller()
+            memo_porc = memoPorcentKaller()
+            memo_livre = memoLivreKaller()
+            fan_vel = fanVelKaller()    
+
+            val = ( cpu_uso, cpu_freq, cpu_media, cpu_temp, memo_uso, memo_disp, memo_porc, memo_livre, fan_vel)
+
+            
+        except:
+            print("Ops, deu erro em algo")
+
+        return val
+        time.sleep(tempo)
+
+def coletasDadosAtual():
+    try:
+        #Salvando dados das funcs em variaveis 
+        cpu_uso = cpuUsoKaller()
+        cpu_freq = cpuFreqKaller()
+        cpu_media = cpuMediaKaller()
+        cpu_temp = cpuTempKaller()
+        memo_uso = memoUsoKaler()
+        memo_disp = memoDispKaller()
+        memo_porc = memoPorcentKaller()
+        memo_livre = memoLivreKaller()
+        fan_vel = fanVelKaller()    
+
+        val = ( cpu_uso, cpu_freq, cpu_media, cpu_temp, memo_uso, memo_disp, memo_porc, memo_livre, fan_vel)
+
+            
+    except:
+        print("Ops, deu erro em algo")
+            
+    return val
+
+
 #definindo a Thread da func principal
-t = Thread(iniciarColeta(tempo_de_Espera))
+#t = Thread(iniciarColeta(tempo_de_Espera))
 #Iniciando a Thread
-t.start()
+#t.start()
