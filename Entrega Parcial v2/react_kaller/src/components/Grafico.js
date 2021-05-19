@@ -17,16 +17,16 @@ import "style.css";
 
 const Grafico = (
   texto = "ola sou um grafico",
-  data = [],
+  data2 = [],
   datakey = "CPU_Uso"
 ) => {
-  console.log(data);
+  console.log(data2);
   return (
     <div>
       <AreaChart
         width={500}
         height={300}
-        data={data}
+        data={data2}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
       >
         <defs>
