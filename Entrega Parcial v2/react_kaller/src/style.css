@@ -1,0 +1,32 @@
+#messages {
+  height: 200px;
+  background-color: #eee;
+  font-size: 12px;
+  padding: 20px;
+}
+
+input {
+  width: 100%;
+}
+
+#submit {
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(to bottom, #20ecec -7%, #5cb5e2 100%);
+}
+
+.testeh3 {
+  text-align: center;
+}
+
+.tituloHome {
+  text-align: center;
+}
+
+.testediv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

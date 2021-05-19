@@ -3,7 +3,11 @@ import sistema
 from threading import Thread
 import asyncio
 
-class Application:
+import numpy as np
+import matplotlib.pyplot as plt 
+from matplotlib import animation
+
+class monitor:
     def __init__(self, master=None):
         self.fonte = ("Verdana", "15")
 
@@ -54,7 +58,7 @@ class Application:
 
         self.container15 = Frame(master)
         self.container15["padx"] = 20
-        self.container15["pady"] = 5
+        self.container15["pady"] = 5    
         self.container15.pack()
         self.container16 = Frame(master)
         self.container16["padx"] = 20
@@ -65,7 +69,7 @@ class Application:
         self.container17.pack()
 
         self.titulo = Label(self.container1, text="Monitor de Recursos")
-        self.titulo["font"] = ("Calibri", "9", "bold")
+        self.titulo["font"] = ("Calibri", "15", "bold")
         self.titulo.pack ()
 
         self.espaco = Label(self.container2, text="",
@@ -178,50 +182,64 @@ class Application:
 
 
     def atualizar(self):
-        async def iniciarAtt(self):
-            valores = sistema.coletasDadosAtual()
+        while TRUE:
+            async def iniciarAtt(self):
+                valores = sistema.coletasDadosAtual()
 
-            self.entCpuUso.delete(0, END)
-            self.entCpuUso.insert(INSERT, valores[0])
+                self.entCpuUso.delete(0, END)
+                self.entCpuUso.insert(INSERT, valores[0])
 
-            self.entCpuTemp.delete(0, END)
-            self.entCpuTemp.insert(INSERT, valores[3])
+                self.entCpuTemp.delete(0, END)
+                self.entCpuTemp.insert(INSERT, valores[3])
 
-            self.entCpuFreq.delete(0, END)
-            self.entCpuFreq.insert(INSERT,valores[1])
+                self.entCpuFreq.delete(0, END)
+                self.entCpuFreq.insert(INSERT,valores[1])
 
-            self.entCpuMedia.delete(0, END)
-            self.entCpuMedia.insert(INSERT, valores[2])
+                self.entCpuMedia.delete(0, END)
+                self.entCpuMedia.insert(INSERT, valores[2])
 
-            self.entMemoUso.delete(0, END)
-            self.entMemoUso.insert(INSERT, valores[4])
+                self.entMemoUso.delete(0, END)
+                self.entMemoUso.insert(INSERT, valores[4])
 
-            self.entMemoDisp.delete(0, END)
-            self.entMemoDisp.insert(INSERT, valores[5])
+                self.entMemoDisp.delete(0, END)
+                self.entMemoDisp.insert(INSERT, valores[5])
 
-            self.entMemoPorc.delete(0, END)
-            self.entMemoPorc.insert(INSERT, valores[6])
+                self.entMemoPorc.delete(0, END)
+                self.entMemoPorc.insert(INSERT, valores[6])
 
-            self.entMemoLivre.delete(0, END)
-            self.entMemoLivre.insert(INSERT, valores[7])
+                self.entMemoLivre.delete(0, END)
+                self.entMemoLivre.insert(INSERT, valores[7])
 
-            self.entFanVel.delete(0, END)
-            self.entFanVel.insert(INSERT, valores[8])
+                self.entFanVel.delete(0, END)
+                self.entFanVel.insert(INSERT, valores[8])
 
-        asyncio.run(iniciarAtt(self))
+            asyncio.run(iniciarAtt(self))
 
 
     def criarNovaTela(self):
-        newWindow = Toplevel()
-        labelExample = Label(newWindow, text = "Graficossss aquiii")
+        fig, ax = plt.subplots()
+
+        def animar():
+            x=[0,1,3]
+            y=[20,30,50]
+            ax.clear()
+            ax.plot([1,2,3,4],[1,4,9,16])
+            ax.set_xlabel('teste')
         
 
+        animar()
+
+        """ newWindow = Toplevel()
+        labelExample = Label(newWindow, text = "Graficossss aquiii")
+        botgraficos = Button(newWindow, text="teste grafico", command=graficoPlot)
+
         labelExample.pack()
+        botgraficos.pack() """
  
         
         
 
 
 root = Tk()
-Application(root)
+monitor(root)
 root.mainloop()

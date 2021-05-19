@@ -3,6 +3,7 @@ import time
 import mysql.connector
 from threading import Thread
 from datetime import datetime
+from datetime import date
 
 #tempo do funcionamento em segundos
 tempo_de_Espera = 360 
@@ -147,6 +148,7 @@ def coletasDadosAtual():
         print("Ops, deu erro em algo")
             
     return val
+
 
 
 #definindo a Thread da func principal

@@ -120,8 +120,9 @@ def quandoFrqMinMax():
 
 
     
-ultimaTemp()
+""" ultimaTemp()
 quandoFrqMinMax()
 cpuUsoEntre()
 ultimosDiasTemp()
 memoPorcBaixa()
+ """
