@@ -7,7 +7,7 @@ from datetime import datetime
 #funcs  das consultas dos dados
 
 #função retorna data e porcentagem de uso de memoria abaixo e igual 28%
-def memoPorcBaixa():
+def memoPorcBaixa(numero):
     try:
         mydb = mysql.connector.connect(
                 host="localhost",
@@ -16,12 +16,19 @@ def memoPorcBaixa():
                 database="pcinfo"
             )
         mycursor = mydb.cursor()
-        mycursor.execute("SELECT data,memo_porc FROM pcinfo3 WHERE memo_porc <= 28 ORDER BY `pcinfo3`.`data` ASC")
+        select = "SELECT data,memo_porc FROM pcinfo3 WHERE memo_porc <= " + numero + " ORDER BY `pcinfo3`.`data` ASC"
+       
+        mycursor.execute(select)
     
         resultado = mycursor.fetchall()
-
-        print("Pocentagens de memoria abaixo de 28%", resultado)
         mydb.close()
+
+        palavras = []
+
+        for cheese in resultado:
+            palavras.append({'name': str(cheese[0]) ,'Memoria_Porc' : cheese[1]})
+
+        return palavras
     except:
         print('erro')
 
@@ -119,7 +126,9 @@ def quandoFrqMinMax():
         print('erro')
 
 
-    
+
+print(memoPorcBaixa("50"))
+
 """ ultimaTemp()
 quandoFrqMinMax()
 cpuUsoEntre()

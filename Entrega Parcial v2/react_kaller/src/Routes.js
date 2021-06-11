@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Busca from "./pages/Busca";
 
 export default () => {
   return (
@@ -9,7 +10,7 @@ export default () => {
         <Home />
       </Route>
       <Route exact path="/busca">
-        Busca Kaller
+        <Busca />
       </Route>
     </Switch>
   );
