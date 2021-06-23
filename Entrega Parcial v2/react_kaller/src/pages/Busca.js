@@ -44,7 +44,7 @@ const Busca = () => {
     <div>
       <div className="formDiv">
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
-          <label>Informe os dias:</label>
+          <label>Valor:</label>
           <Controller
             name="valor_informado"
             control={control}

@@ -1,3 +1,11 @@
-# How to Run
+# Como iniciar
 
-`npm i && npm run start`
+`yarn start`
+
+## Como iniciar servidor
+
+`iniciar Python serverWS`
+
+## Como iniciar coleta
+
+`iniciar Python sistema`
