@@ -44,7 +44,7 @@ const Home = ({}) => {
   return (
     <div>
       <h1 className="tituloHome">Monitor de Recursos</h1>
-      <div className="testediv">
+      <div className="graficodiv">
         <div>
           <h3 className="testeh3">CPU Uso</h3>
           <AreaChart

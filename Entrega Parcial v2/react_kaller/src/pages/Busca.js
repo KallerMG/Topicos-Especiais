@@ -2,7 +2,6 @@ import React from "react";
 import Select from "react-select";
 import { useForm, Controller } from "react-hook-form";
 import Input from "@material-ui/core/Input";
-import { TextField, Checkbox, FormControlLabel } from "@material-ui/core";
 
 import axios from "axios";
 
@@ -43,85 +42,42 @@ const Busca = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <Controller
-          name="valor_informado"
-          control={control}
-          defaultValue=""
-          rules={{ required: true }}
-          render={({ field }) => <Input {...field} />}
-        />
-        <Controller
-          name="busca"
-          control={control}
-          render={({ field }) => (
-            <Select
-              {...field}
-              options={[
-                { value: "memoBaixa", label: "Memoria <= 'x'" },
-                {
-                  value: "tempMaxMin",
-                  label: "Temperatura Maxima e Minima em 'x' dias ",
-                },
-              ]}
-            />
-          )}
-        />
-        <label>CPU Uso</label>
-        <Controller
-          name="CPU_Uso"
-          control={control}
-          defaultValue={false}
-          render={({ field }) => <Checkbox {...field} label="name" />}
-        />
-        <label>CPU Freq</label>
-        <Controller
-          name="CPU_Freq"
-          control={control}
-          defaultValue={false}
-          render={({ field }) => <Checkbox {...field} label="name" />}
-        />
-        <label>CPU Media</label>
-        <Controller
-          name="CPU_Media"
-          control={control}
-          defaultValue={false}
-          render={({ field }) => <Checkbox {...field} label="name" />}
-        />
-        <label>CPU Temp</label>
-        <Controller
-          name="CPU_Temp"
-          control={control}
-          defaultValue={false}
-          render={({ field }) => <Checkbox {...field} label="name" />}
-        />
-        <label>Memo Uso</label>
-        <Controller
-          name="Memo_Uso"
-          control={control}
-          defaultValue={false}
-          render={({ field }) => <Checkbox {...field} label="name" />}
-        />
-        <label>Memo Disp</label>
-        <Controller
-          name="Memo_Disp"
-          control={control}
-          defaultValue={false}
-          render={({ field }) => <Checkbox {...field} label="name" />}
-        />
-        <label>Memo Porc</label>
-        <Controller
-          name="Memo_Porc"
-          control={control}
-          defaultValue={false}
-          render={({ field }) => <Checkbox {...field} label="name" />}
-        />
-        <input type="submit" />
-      </form>
+      <div className="formDiv">
+        <form className="form" onSubmit={handleSubmit(onSubmit)}>
+          <label>Informe os dias:</label>
+          <Controller
+            name="valor_informado"
+            control={control}
+            rules={{ required: true }}
+            render={({ field }) => <Input {...field} className="input" />}
+          />
+          <Controller
+            name="busca"
+            control={control}
+            render={({ field }) => (
+              <Select
+                {...field}
+                options={[
+                  { value: "memoBaixa", label: "Memoria <= 'x'" },
+                  {
+                    value: "ultimoDia",
+                    label: "Valores dos ultimos 'x' Dias",
+                  },
+                  { value: "usoDias", label: "Cpu Uso <= 'x'" },
+                  { value: "freqDias", label: "CPU Freq <= 'x'" },
+                  { value: "tempDias", label: "CPU Temp <= 'x'" },
+                ]}
+              />
+            )}
+          />
 
-      <div className="testediv">
+          <input type="submit" className="button" />
+        </form>
+      </div>
+
+      <div className="graficodiv">
         <div>
-          <h3 className="testeh3">CPU Uso</h3>
+          <h3 className="h3">CPU Uso</h3>
           <AreaChart
             width={500}
             height={300}
@@ -149,7 +105,7 @@ const Busca = () => {
           </AreaChart>
         </div>
         <div>
-          <h3 className="testeh3">CPU Freq</h3>
+          <h3 className="h3">CPU Freq</h3>
           <AreaChart
             width={500}
             height={300}
@@ -177,7 +133,7 @@ const Busca = () => {
           </AreaChart>
         </div>
         <div>
-          <h3 className="testeh3">CPU Media</h3>
+          <h3 className="h3">CPU Media</h3>
           <AreaChart
             width={500}
             height={300}
@@ -205,7 +161,7 @@ const Busca = () => {
           </AreaChart>
         </div>
         <div>
-          <h3 className="testeh3">CPU Temp</h3>
+          <h3 className="h3">CPU Temp</h3>
           <AreaChart
             width={500}
             height={300}
@@ -233,7 +189,7 @@ const Busca = () => {
           </AreaChart>
         </div>
         <div>
-          <h3 className="testeh3">Memoria Porc</h3>
+          <h3 className="h3">Memoria Porc</h3>
           <AreaChart
             width={500}
             height={300}
@@ -262,7 +218,7 @@ const Busca = () => {
         </div>
 
         <div>
-          <h3 className="testeh3">Memoria Teste</h3>
+          <h3 className="h3">Memoria Teste</h3>
           <AreaChart
             width={500}
             height={300}

@@ -149,9 +149,8 @@ def coletasDadosAtual():
             
     return val
 
-
-
-#definindo a Thread da func principal
-#t = Thread(iniciarColeta(tempo_de_Espera))
-#Iniciando a Thread
-#t.start()
+def start(temp):
+    #definindo a Thread da func principal
+    t = Thread(iniciarColeta(temp))
+    #Iniciando a Thread
+    t.start()

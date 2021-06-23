@@ -532,10 +532,10 @@ input {
 }
 
 body {
-  background: linear-gradient(to bottom, #20ecec -7%, #5cb5e2 100%);
+  background: #cbf1f2d6;
 }
 
-.testeh3 {
+.h3 {
   text-align: center;
 }
 
@@ -543,10 +543,40 @@ body {
   text-align: center;
 }
 
-.testediv {
+.graficodiv {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.formDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.form {
+  width: 300px;
+}
+
+.input {
+  font: inherit;
+  color: currentColor;
+  width: 100%;
+  border: 10px;
+  height: 50px !important;
+  margin: 10px 0;
+  display: block;
+  padding: 6px 0 7px;
+  min-width: 0;
+  background: #fff;
+}
+
+.button {
+  background: cornflowerblue;
+  border: 0px;
+  border-radius: 14px;
+  margin-top: 11px;
 }
 
 

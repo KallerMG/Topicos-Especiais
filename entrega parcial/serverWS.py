@@ -1,8 +1,11 @@
 from flask import Flask,jsonify,request
 from flask_cors import CORS
+import json
 import time
 import sistema
 import selectBanco
+
+from threading import Thread
 
 
 app = Flask(__name__)
@@ -29,12 +32,26 @@ def home():
 @app.route('/busca', methods=['GET', 'POST'])
 def busca():
   content = request.json
-  print (content)
+  busca= content["busca"]
+
+  def f(x):
+    return {
+        'ultimoDia': selectBanco.ultimosDias(str(content["valor_informado"])),
+        'memoBaixa': selectBanco.memoPorcBaixa(str(content["valor_informado"])),
+        'usoDias': selectBanco.cpuUsoDias(str(content["valor_informado"])),
+        'freqDias': selectBanco.cpuFreqDias(str(content["valor_informado"])),
+        'tempDias': selectBanco.cpuTempDias(str(content["valor_informado"])),
+    }.get(x, 9)    # 9 is default if x not found
 
   """ valores = [{'name': "data" ,'CPU_Uso' : 10000}] """
 
-  valores = selectBanco.memoPorcBaixa()
+  valores = f(busca["value"])
   return jsonify(valores)
 
 
-app.run()
+t = Thread(app.run())
+t.start()
+
+
+
+

@@ -25,12 +25,122 @@ def memoPorcBaixa(numero):
 
         palavras = []
 
-        for cheese in resultado:
-            palavras.append({'name': str(cheese[0]) ,'Memoria_Porc' : cheese[1]})
+        for val in resultado:
+            palavras.append({'name': str(val[0]) ,'Memoria_Porc' : val[1]})
 
         return palavras
     except:
         print('erro')
+
+
+def cpuUsoDias(numero):
+    try:
+        mydb = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password="",
+                database="pcinfo"
+            )
+        mycursor = mydb.cursor()
+        select = "SELECT data,cpu_uso FROM pcinfo3 WHERE cpu_uso <= " + numero + " ORDER BY `pcinfo3`.`data` ASC"
+       
+        mycursor.execute(select)
+    
+        resultado = mycursor.fetchall()
+        mydb.close()
+
+        palavras = []
+
+        for val in resultado:
+            palavras.append({'name': str(val[0]) ,'CPU_Uso' : val[1]})
+
+        return palavras
+    except:
+        print('erro')
+
+def cpuFreqDias(numero):
+    try:
+        mydb = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password="",
+                database="pcinfo"
+            )
+        mycursor = mydb.cursor()
+        select = "SELECT data,cpu_freq FROM pcinfo3 WHERE cpu_freq <= " + numero + " ORDER BY `pcinfo3`.`data` ASC"
+       
+        mycursor.execute(select)
+    
+        resultado = mycursor.fetchall()
+        mydb.close()
+
+        palavras = []
+
+        for val in resultado:
+            palavras.append({'name': str(val[0]) ,'CPU_Freq' : val[1]})
+
+        return palavras
+    except:
+        print('erro')
+
+def cpuTempDias(numero):
+    try:
+        mydb = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password="",
+                database="pcinfo"
+            )
+        mycursor = mydb.cursor()
+        select = "SELECT data,cpu_temp FROM pcinfo3 WHERE cpu_temp <= " + numero + " ORDER BY `pcinfo3`.`data` ASC"
+       
+        mycursor.execute(select)
+    
+        resultado = mycursor.fetchall()
+        mydb.close()
+
+        palavras = []
+
+        for val in resultado:
+            palavras.append({'name': str(val[0]) ,'CPU_Temp' : val[1]})
+
+        return palavras
+    except:
+        print('erro')
+
+
+def ultimosDias(numero):
+    try:
+        mydb = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password="",
+                database="pcinfo"
+            )
+
+        
+        select = "SELECT `data`, `cpu_uso`, `cpu_freq`, `cpu_media`, `cpu_temp`, `memo_uso`, `memo_disp`, `memo_porc`, `memo_livre` FROM `pcinfo3` WHERE data BETWEEN CURRENT_DATE()-"+ numero + " AND CURRENT_DATE() ORDER BY `pcinfo3`.`data` ASC"
+
+        mycursor = mydb.cursor()
+        mycursor.execute(select)
+    
+        resultado = mycursor.fetchall()
+        mydb.close()
+
+        print(resultado)
+
+        palavras = []
+
+    
+        for val in resultado:
+            palavras.append({'name': str(val[0]) ,'CPU_Uso' : val[1], 'CPU_Freq': val[2], 'CPU_Media': val[3], 'CPU_Temp': val[4], 'Memoria_Uso' :val[5], 'Memoria_Disp' :val[6], 'Memoria_Porc' : val[7], 'Memoria_Livre': val[8] })
+
+        return palavras
+      
+    except:
+        print('erro')
+
+
 
 #função retorna temp maxima e minima do cpu nos ultimos 7 dias
 def ultimosDiasTemp():
@@ -127,11 +237,4 @@ def quandoFrqMinMax():
 
 
 
-print(memoPorcBaixa("50"))
 
-""" ultimaTemp()
-quandoFrqMinMax()
-cpuUsoEntre()
-ultimosDiasTemp()
-memoPorcBaixa()
- """
