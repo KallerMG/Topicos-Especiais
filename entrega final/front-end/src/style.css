@@ -1,0 +1,62 @@
+#messages {
+  height: 200px;
+  background-color: #eee;
+  font-size: 12px;
+  padding: 20px;
+}
+
+input {
+  width: 100%;
+}
+
+#submit {
+  width: 100%;
+}
+
+body {
+  background: #cbf1f2d6;
+}
+
+.h3 {
+  text-align: center;
+}
+
+.tituloHome {
+  text-align: center;
+}
+
+.graficodiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.formDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.form {
+  width: 300px;
+}
+
+.input {
+  font: inherit;
+  color: currentColor;
+  width: 100%;
+  border: 10px;
+  height: 50px !important;
+  margin: 10px 0;
+  display: block;
+  padding: 6px 0 7px;
+  min-width: 0;
+  background: #fff;
+}
+
+.button {
+  background: cornflowerblue;
+  border: 0px;
+  border-radius: 14px;
+  margin-top: 11px;
+}
