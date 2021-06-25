@@ -1,7 +1,7 @@
 # Como iniciar servidor
 
-`Python servidor`
+`Python servidor.py`
 
 # Como iniciar coleta
 
-`Python sistema`
+`Python sistema.py`
