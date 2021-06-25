@@ -1,7 +1,7 @@
 # Como iniciar servidor
 
-`iniciar Python serverWS`
+`Python servidor`
 
 # Como iniciar coleta
 
-`iniciar Python sistema`
+`Python sistema`
